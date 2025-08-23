@@ -34,13 +34,24 @@ button:hover {
 /* =====================
    Encabezado con imagen
 ===================== */
+
 header img {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  max-height: 1200px;
+  object-fit: contain;
+  background-color: black; /* o el color que combine con tu diseño */
   display: block;
   border-bottom: 3px solid #d4af37;
 }
+
+
+/* header img {
+  width: 100%;
+  max-height: 1200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid #d4af37;
+} */
 
 /* =====================
    Carrusel
@@ -273,6 +284,7 @@ form button {
     right: 10px;
     padding: 8px 10px;
     font-size: 1em;
+    z-index: 9999;
   }
 }
 
