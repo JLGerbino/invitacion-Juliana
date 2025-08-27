@@ -2,23 +2,46 @@
    Estilo Global
 ===================== */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Ubuntu Mono", monospace;/*'Open Sans', sans-serif;*/
   background-color: #fcf9f9;   /* Fondo blanco */
   color: #0c0c0c;           /* negro */
   margin: 0;
   padding: 0;
   text-align: center;
 }
-h2, h3, p {
+h2, h3, p{
+  font-family: "Caveat", cursive;/*'Great Vibes', cursive;*/
+  color: white;
+}
+
+.textoDialogo{
+  font-family: "Ubuntu Mono", monospace;
   color: white;
 }
 
 h1, h4, h5, h6 {
+  /*font-family: 'Great Vibes', cursive;*/
   color: black;
   margin: 10px 0;
 }
+.whats{
+  font-family: "Ubuntu Mono", monospace;
+  text-decoration: none;
+  color: white;  
+}
+
+.frases{
+  font-family: "Caveat", cursive;
+  color: black;
+  font-size: 25px;
+}
+/* p{
+  color: white;
+  font-family:"Ubuntu Mono", monospace;
+} */
 
 button {
+  font-family: "Ubuntu Mono", monospace;
   background: white;
   color: #000;
   border: none;
@@ -42,7 +65,7 @@ header img {
   width: 100%;
   max-height: 1200px;
   object-fit: contain;
-  background-color: black; /* o el color que combine con tu diseño */
+  background-color: black; 
   display: block;
   border-bottom: 3px solid black;
 }
@@ -93,6 +116,7 @@ header img {
 }
 
 .faltan{
+  font-size: 50px;
   color: black;
 }
 
@@ -122,6 +146,7 @@ header img {
 .flip {
   display: inline-block;
   animation: none;
+  font-family: "Ubuntu Mono", monospace; /*"Caveat", cursive;*/
 }
 
 .flip.animate {

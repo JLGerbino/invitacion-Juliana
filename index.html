@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Cumpleaños - Diego y Mariano 50</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
-
 </head>
 <body>
     <!-- Botón de música -->
@@ -14,7 +16,6 @@
     <audio id="bgMusic" src="musica/Los Autenticos Decadentes - Pendeviejo (video oficial) [HD].mp3" loop></audio>
 
     <!-- Encabezado -->
-
     <header class="header">
   <img src="fotos/encabezado.png" alt="Encabezado cumpleaños" class="header-img" />
 </header>  
@@ -28,7 +29,9 @@
     <div class="time-box"><span id="seconds" class="flip">00</span><small>seg</small></div>
   </div>
 </section>
-
+    <div class="frases">
+        <h4>"Los 50 son solo el comienzo de las mejores historias."</h4> 
+    </div>
 
     <!-- Carrusel -->
     <div class="carousel">
@@ -39,36 +42,53 @@
 
     <section class="evento">
 
-
-
-
-
+  <!--Bloque de Dress -->  
+   <div class="evento-box">
+    <div class="icon fiesta">🎉</div>
+    <h3>Dress Code</h3>
+    <p>Vestimenta</p>
+    <button onclick="abrirDialogo('agendaDress')">Ver</button>
+  </div>
 
 <!--Bloque de Fiesta -->  
    <div class="evento-box">
     <div class="icon fiesta">🎉</div>
     <h3>Fiesta</h3>
     <p>Domingo 23 de Noviembre - 21 hs.</p>
-    <button onclick="abrirDialogo('agendaDialog')">📅 Agendar</button>
+    <button onclick="abrirDialogo('agendaDialog')">Agendar</button>
+  </div>
+
+  <!--Bloque de Lugar -->  
+   <div class="evento-box">
+    <div class="icon fiesta">🎉</div>
+    <h3>Lugar</h3>
+    <p>Cantina camping Club Atletico Empalme</p>
+    <button onclick="abrirDialogo('lugar')">Confirmar asistencia</button>
   </div>
 
   <!-- Bloque de Lugar -->
-  <div class="evento-box">
+  <!-- <div class="evento-box">
     <div class="icon lugar">📍</div>
     <h3>Lugar</h3>
     <p>Cantina camping Club Atletico Empalme</p>
-    <button onclick="abrirDialogo('asistenciaDialog')">✅ Confirmar asistencia</button>
-  </div>
-
-  <!-- Bloque de Dirección -->
+    <button onclick="abrirDialogo('asistenciaDialog')">Confirmar asistencia</button>
+  </div>   -->
 
   <!-- Bloque de Dirección -->
 <div class="evento-box">
   <div class="icon direccion" id="iconDireccion"></div>
   <h3>Dirección</h3>
   <p>Pje Sgto Cabral 480</p>
-  <button onclick="abrirDialogo('mapaDialog')">🌍 Ver en Google Maps</button>
+  <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
 </div>
+
+<!--Bloque de tarjeta -->  
+   <div class="evento-box">
+    <div class="icon fiesta">🎉</div>
+    <h3>Tarjetas</h3>
+    <p>Toda la info</p>
+    <button onclick="abrirDialogo('tarjeta')">Ver</button>
+  </div>
 
 <!-- Dialogo Mapa -->
 <dialog id="mapaDialog">
@@ -80,39 +100,85 @@
   <button onclick="cerrarDialogo('mapaDialog')">Cerrar</button>
 </dialog>
 
-  <!-- <div class="evento-box">
-    <div class="icon direccion">🗺️</div>
-    <h3>Dirección</h3>
-    <p>Av. Siempre Viva 123</p>
-    <a href="https://www.google.com/maps?q=Av.+Siempre+Viva+123" target="_blank">
-      <button>🌍 Ver en Google Maps</button>
-    </a>
-  </div>
-</section> -->
- 
 <!-- Dialogo Agendar -->
 <dialog id="agendaDialog">
   <h2>Agendar Fiesta 🎉</h2>
-  <p>¿Querés agendar este evento en tu calendario?</p>
+  <p class="textoDialogo">¿Querés agendar este evento en tu calendario?</p>
   <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
 </dialog>
 
+<!-- Dialogo dress code -->
+<dialog id="agendaDress">
+  <h2>Como vestir?</h2>
+  <p class="textoDialogo">Si fuiste al colegio con ellos,</p>
+  <p class="textoDialogo">vestite como alguien de tu edad.</p>
+  <p class="textoDialogo">No te quieras hacer el pendejo.</p>
+  <button onclick="cerrarDialogo('agendaDress')">Cerrar</button>
+</dialog>
+
+<!-- Dialogo Confirmar Asistencia -->
+<dialog id="lugar">
+  <h2>Confirmale tu presencia a</h2>  
+  <a class="whats" href="https://wa.me/543364406580"
+            ><img
+              src="fotos/whatsapp.png"
+              alt="WhatsApp"
+              height="18px"
+              width="18px"
+            /> a Diego</a>
+        
+  <p class="textoDialogo"><a class="whats" href="https://wa.me/543364544769"
+            ><img
+              src="fotos/whatsapp.png"
+              alt="WhatsApp"
+              height="18px"
+              width="18px"
+            /> a Mariano</a></p>
+  <button onclick="cerrarDialogo('lugar')">Cerrar</button>
+</dialog>
+
 <!-- Dialogo Confirmar asistencia -->
-<dialog id="asistenciaDialog">
+<!-- <dialog id="asistenciaDialog">
   <h2>Confirmar asistencia ✅</h2>
-  <form method="POST" action="https://formspree.io/f/xxxxxx"> <!-- tu endpoint -->
+  <form method="POST" action="https://formspree.io/f/xgvzbvqy">     
     <label for="nombre">Tu Nombre:</label>
     <input type="text" name="nombre" required>
     <button type="submit">Enviar</button>
   </form>
   <button onclick="cerrarDialogo('asistenciaDialog')">Cerrar</button>
+</dialog> -->
+
+<!-- Dialogo tarjeta -->
+<dialog id="tarjeta">
+  <h2>Costo de las trajetas</h2>
+  <p class="textoDialogo">Mayores $</p>
+  <p class="textoDialogo">Menores 12 años $</p>
+  <h2>Podes transferir a los siguientes alias</h2>
+  <p class="textoDialogo">cala.cupo.coca Titular Diego Ciarrochi</p>
+  <p class="textoDialogo">vera.pino.ocas Titular Mariano Ocampo</p>
+  <h2>Avisa del pago de las trajetas a:</h2>
+  <a class="whats" href="https://wa.me/543364406580"
+            ><img
+              src="fotos/whatsapp.png"
+              alt="WhatsApp"
+              height="18px"
+              width="18px"
+            /> a Diego</a>
+        
+  <p><a class="whats" href="https://wa.me/543364544769"
+            ><img
+              src="fotos/whatsapp.png"
+              alt="WhatsApp"
+              height="18px"
+              width="18px"
+            /> a Mariano</a></p>
+  <button onclick="cerrarDialogo('tarjeta')">Cerrar</button>
 </dialog>
 
 
     <!-- Frases -->
-    <div class="frases">
-        <p>"Los 50 son solo el comienzo de las mejores historias."</p>
-        <p>"La vida empieza cada día, y hoy empieza con una fiesta."</p>
+    <div class="frases">        
+        <h4>"La vida empieza cada día, y hoy empieza con una fiesta."</h4>
     </div>
 
     <!-- Formulario -->
@@ -131,5 +197,10 @@
     </form>
 
     <script src="script.js"></script>
+
+
+    <footer class="pie3">
+        <h5>Sitio web creado por Jose Luis Gerbino</h5>
+      </footer>
 </body>
 </html>
