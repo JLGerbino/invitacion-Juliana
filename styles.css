@@ -30,6 +30,11 @@ h1, h4, h5, h6 {
   color: white;  
 }
 
+.btn-agendar{
+  text-decoration: none;
+  color: white;
+}
+
 .frases{
   font-family: "Caveat", cursive;
   color: black;
@@ -288,6 +293,37 @@ form button {
   margin-top: 20px;
   width: 100%;
 }
+
+.agenda-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.agenda-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.agenda-btn:hover {
+  background: #f7f7f7;
+  transform: scale(1.02);
+}
+
+
+
+
+
 /* =====================
    Ajustes Responsive
 ===================== */

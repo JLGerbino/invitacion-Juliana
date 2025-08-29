@@ -17,8 +17,12 @@
 
     <!-- Encabezado -->
     <header class="header">
-  <img src="fotos/encabezado.png" alt="Encabezado cumpleaños" class="header-img" />
+  <img src="fotos/encabezado5.png" alt="Encabezado cumpleaños" class="header-img" />
 </header>  
+<div class="abajo">
+    <div class="icon info" id="iconInfo">
+    <img src= "fotos/icons8-abajo.gif" alt="Ubicación" class="icono-info">
+  </div> </div>
     
     <section class="countdown">
   <h2 class="faltan">🎂 Faltan 🎉</h2>
@@ -51,16 +55,20 @@
   </div>
 
 <!--Bloque de Fiesta -->  
-   <div class="evento-box">
-    <div class="icon fiesta">🎉</div>
+   <div class="evento-box">   
+    <div class="icon agendar" id="iconAgendar">
+    <img src="fotos/icons8-agenda.gif" alt="Ubicación" class="icono-mapa">
+  </div>
     <h3>Fiesta</h3>
     <p>Domingo 23 de Noviembre - 21 hs.</p>
-    <button onclick="abrirDialogo('agendaDialog')">Agendar</button>
+    <button onclick="abrirDialogo('agendaDialog')">agendar</button>
   </div>
 
   <!--Bloque de Lugar -->  
    <div class="evento-box">
-    <div class="icon fiesta">🎉</div>
+    <div class="icon confirmar" id="iconConfirmar">
+    <img src="fotos/icons8-confirmar.gif" alt="Confirmar" class="icono-mapa">
+  </div>
     <h3>Lugar</h3>
     <p>Cantina camping Club Atletico Empalme</p>
     <button onclick="abrirDialogo('lugar')">Confirmar asistencia</button>
@@ -75,16 +83,29 @@
   </div>   -->
 
   <!-- Bloque de Dirección -->
+
 <div class="evento-box">
-  <div class="icon direccion" id="iconDireccion"></div>
+  <div class="icon direccion" id="iconDireccion">
+    <img src="fotos/icons8-marcador.gif" alt="Ubicación" class="icono-mapa">
+  </div>
   <h3>Dirección</h3>
   <p>Pje Sgto Cabral 480</p>
   <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
 </div>
 
+
+<!-- <div class="evento-box">
+  <div class="icon direccion" id="iconDireccion">🎉</div>
+  <h3>Dirección</h3>
+  <p>Pje Sgto Cabral 480</p>
+  <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
+</div> -->
+
 <!--Bloque de tarjeta -->  
    <div class="evento-box">
-    <div class="icon fiesta">🎉</div>
+    <div class="icon info" id="iconInfo">
+    <img src="fotos/icons8-información.gif" alt="Ubicación" class="icono-info">
+  </div>
     <h3>Tarjetas</h3>
     <p>Toda la info</p>
     <button onclick="abrirDialogo('tarjeta')">Ver</button>
@@ -101,11 +122,65 @@
 </dialog>
 
 <!-- Dialogo Agendar -->
+<!-- Botón inicial -->
+<!-- <button onclick="abrirDialogo('agendaDialog')">📅 Agendar</button> -->
+
+<!-- Diálogo de opciones -->
 <dialog id="agendaDialog">
+  <h2>Agendar Fiesta 🎉</h2>
+  <p class="textoDialogo">Elegí dónde querés agendar el evento:</p>
+
+  <div class="agenda-opciones">
+    <!-- Google Calendar -->
+    <a 
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fiesta+50+a%C3%B1os+Diego+y+Mariano&dates=20251123T210000/20251124T030000&details=%C2%A1No+faltes+a+la+fiesta+de+los+50+de+Diego+y+Mariano!&location=Pje+Sgto+Cabral+480&sf=true&output=xml" 
+      target="_blank" 
+      class="agenda-btn"
+    >
+      <img src="fotos/google.png" alt="Google Calendar" width="24">
+      Google
+    </a>
+    <!-- Apple Calendar -->
+    <a href="Fiesta50.ics" download class="agenda-btn">
+      <img src="fotos/apple.png" alt="Apple Calendar" width="24">
+      Apple Calendar
+    </a>
+    <!-- Outlook -->
+    <a 
+      href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Fiesta+50+a%C3%B1os+Diego+y+Mariano&body=%C2%A1No+faltes+a+la+fiesta!&startdt=2025-11-23T21:00:00&enddt=2025-11-24T03:00:00&location=Pje+Sgto+Cabral+480" 
+      target="_blank" 
+      class="agenda-btn"
+    >
+      <img src="fotos/outlook.webp" alt="Outlook" width="24">
+      Outlook
+    </a>
+    <!-- Calendarios genéricos (ICS) -->
+    <a href="Fiesta50.ics" download class="agenda-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Calendar_font_awesome.svg" alt="ICS" width="24">
+      Otros
+    </a>
+  </div>
+  <br>
+  <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
+</dialog>
+
+
+<!-- <dialog id="agendaDialog">
+  <h2>Agendar Fiesta 🎉</h2>
+  <p class="textoDialogo">¿Querés agendar este evento en tu calendario?</p>
+
+  <a href="Fiesta.ics" download class="btn-agendar">📅 Agendar</a>
+
+  <br><br>
+  <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
+</dialog>
+ -->
+
+<!-- <dialog id="agendaDialog">
   <h2>Agendar Fiesta 🎉</h2>
   <p class="textoDialogo">¿Querés agendar este evento en tu calendario?</p>
   <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
-</dialog>
+</dialog> -->
 
 <!-- Dialogo dress code -->
 <dialog id="agendaDress">
@@ -150,13 +225,13 @@
 
 <!-- Dialogo tarjeta -->
 <dialog id="tarjeta">
-  <h2>Costo de las trajetas</h2>
+  <h2>Costo de las tarjetas</h2>
   <p class="textoDialogo">Mayores $</p>
   <p class="textoDialogo">Menores 12 años $</p>
   <h2>Podes transferir a los siguientes alias</h2>
-  <p class="textoDialogo">cala.cupo.coca Titular Diego Ciarrochi</p>
-  <p class="textoDialogo">vera.pino.ocas Titular Mariano Ocampo</p>
-  <h2>Avisa del pago de las trajetas a:</h2>
+  <p class="textoDialogo">Dciarrocc1179.nx.ars Titular Diego Andres Ciarrochi</p>  
+  <p class="textoDialogo">BLOC.DETUVO.MESADA Titular Mariano Cesar Ocampo</p>
+  <h2>Avisa del pago de las tarjetas a:</h2>
   <a class="whats" href="https://wa.me/543364406580"
             ><img
               src="fotos/whatsapp.png"
