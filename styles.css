@@ -35,6 +35,14 @@ h1, h4, h5, h6 {
   color: white;
 }
 
+.titulo{
+  font-size: 30px;
+}
+
+.subtitulo{
+  font-size: 20px;
+}
+
 .frases{
   font-family: "Caveat", cursive;
   color: black;

@@ -25,7 +25,7 @@
   </div> </div>
     
     <section class="countdown">
-  <h2 class="faltan">🎂 Faltan 🎉</h2>
+  <h2 class="faltan">🎂 Faltan 🎂</h2>
   <div id="timer">
     <div class="time-box"><span id="days" class="flip">00</span><small>días</small></div>
     <div class="time-box"><span id="hours" class="flip">00</span><small>hs</small></div>
@@ -48,66 +48,66 @@
 
   <!--Bloque de Dress -->  
    <div class="evento-box">
-    <div class="icon fiesta">🎉</div>
-    <h3>Dress Code</h3>
-    <p>Vestimenta</p>
+    <div class="icon agendar" id="iconAgendar">
+    <img src="fotos/icons8-fiesta.gif" alt="Ubicación" class="icono-mapa">
+  </div>    
+    <h3 class="titulo">Dress Code</h3>
+    <p class="subtitulo">Vestimenta</p>
     <button onclick="abrirDialogo('agendaDress')">Ver</button>
   </div>
+<div class="frases">
+        <h4>"No estamos envejeciendo, solo nos hacemos más "vintages"</h4> 
+    </div>
 
 <!--Bloque de Fiesta -->  
    <div class="evento-box">   
     <div class="icon agendar" id="iconAgendar">
     <img src="fotos/icons8-agenda.gif" alt="Ubicación" class="icono-mapa">
   </div>
-    <h3>Fiesta</h3>
-    <p>Domingo 23 de Noviembre - 21 hs.</p>
+    <h3 class="titulo">Fiesta</h3>
+    <p class="subtitulo">Domingo 23 de Noviembre - 21 hs.</p>
     <button onclick="abrirDialogo('agendaDialog')">agendar</button>
   </div>
+
+  <div class="frases">
+        <h4>"Los 50 son 20 + 30 años de experiencia!!!"</h4> 
+    </div>
 
   <!--Bloque de Lugar -->  
    <div class="evento-box">
     <div class="icon confirmar" id="iconConfirmar">
     <img src="fotos/icons8-confirmar.gif" alt="Confirmar" class="icono-mapa">
   </div>
-    <h3>Lugar</h3>
-    <p>Cantina camping Club Atletico Empalme</p>
+    <h3 class="titulo">Lugar</h3>
+    <p class="subtitulo">Cantina camping Club Atletico Empalme</p>
     <button onclick="abrirDialogo('lugar')">Confirmar asistencia</button>
   </div>
 
-  <!-- Bloque de Lugar -->
-  <!-- <div class="evento-box">
-    <div class="icon lugar">📍</div>
-    <h3>Lugar</h3>
-    <p>Cantina camping Club Atletico Empalme</p>
-    <button onclick="abrirDialogo('asistenciaDialog')">Confirmar asistencia</button>
-  </div>   -->
+  <div class="frases">
+        <h4>"La vida comienza a los 50, lo anterior es solamente práctica"</h4> 
+    </div>  
 
-  <!-- Bloque de Dirección -->
-
+<!-- Bloque de Dirección -->
 <div class="evento-box">
   <div class="icon direccion" id="iconDireccion">
     <img src="fotos/icons8-marcador.gif" alt="Ubicación" class="icono-mapa">
   </div>
-  <h3>Dirección</h3>
-  <p>Pje Sgto Cabral 480</p>
+  <h3 class="titulo">Dirección</h3>
+  <p class="subtitulo">Pje Sgto Cabral 480</p>
   <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
 </div>
 
-
-<!-- <div class="evento-box">
-  <div class="icon direccion" id="iconDireccion">🎉</div>
-  <h3>Dirección</h3>
-  <p>Pje Sgto Cabral 480</p>
-  <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
-</div> -->
+<div class="frases">
+        <h4>"Los primeros 50 años de la infancia son los más difíciles!"</h4> 
+    </div>
 
 <!--Bloque de tarjeta -->  
    <div class="evento-box">
     <div class="icon info" id="iconInfo">
     <img src="fotos/icons8-información.gif" alt="Ubicación" class="icono-info">
   </div>
-    <h3>Tarjetas</h3>
-    <p>Toda la info</p>
+    <h3 class="titulo">Tarjetas</h3>
+    <p class="subtitulo">Toda la info</p>
     <button onclick="abrirDialogo('tarjeta')">Ver</button>
   </div>
 
@@ -122,12 +122,9 @@
 </dialog>
 
 <!-- Dialogo Agendar -->
-<!-- Botón inicial -->
-<!-- <button onclick="abrirDialogo('agendaDialog')">📅 Agendar</button> -->
-
 <!-- Diálogo de opciones -->
 <dialog id="agendaDialog">
-  <h2>Agendar Fiesta 🎉</h2>
+  <h2>Agendar Fiesta</h2>
   <p class="textoDialogo">Elegí dónde querés agendar el evento:</p>
 
   <div class="agenda-opciones">
@@ -163,24 +160,6 @@
   <br>
   <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
 </dialog>
-
-
-<!-- <dialog id="agendaDialog">
-  <h2>Agendar Fiesta 🎉</h2>
-  <p class="textoDialogo">¿Querés agendar este evento en tu calendario?</p>
-
-  <a href="Fiesta.ics" download class="btn-agendar">📅 Agendar</a>
-
-  <br><br>
-  <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
-</dialog>
- -->
-
-<!-- <dialog id="agendaDialog">
-  <h2>Agendar Fiesta 🎉</h2>
-  <p class="textoDialogo">¿Querés agendar este evento en tu calendario?</p>
-  <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
-</dialog> -->
 
 <!-- Dialogo dress code -->
 <dialog id="agendaDress">
