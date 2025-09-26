@@ -1,198 +1,341 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Cumpleaños - Diego y Mariano 50</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Fiesta de 15</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
+
 </head>
-<body>
-    <!-- Botón de música -->
-    <button id="musicToggle" class="music-btn">🎵</button>
-    <audio id="bgMusic" src="musica/Los Autenticos Decadentes - Pendeviejo (video oficial) [HD].mp3" loop></audio>
 
-    <!-- Encabezado -->
-    <header class="header">
-  <img src="fotos/encabezado5.png" alt="Encabezado cumpleaños" class="header-img" />
-</header>  
-<div class="abajo">
+<body>  
+  <!-- Botón de música -->
+  <button id="musicToggle" class="music-btn">
+    <!-- Icono Nota Musical -->
+    <svg id="iconPlay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+      fill="white">
+      <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" />
+    </svg>
+    <audio id="bgMusic" src="musica/Aerosmith - Crazy.mp3" loop></audio>
+
+    <!-- Icono Pausa -->
+    <svg id="iconPause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+      fill="white" style="display:none;">
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+    </svg>
+  </button>
+
+  <!-- Audio oculto -->
+  <audio id="bgMusic" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <img src="fotos/portada1.png" alt="Encabezado cumpleaños" class="header-img" />
+  </header>
+  <!-- <div class="abajo">
     <div class="icon info" id="iconInfo">
-    <img src= "fotos/icons8-abajo.gif" alt="Ubicación" class="icono-info">
-  </div> </div>
-    
-    <section class="countdown">
-  <h2 class="faltan">🎂 Faltan 🎂</h2>
-  <div id="timer">
-    <div class="time-box"><span id="days" class="flip">00</span><small>días</small></div>
-    <div class="time-box"><span id="hours" class="flip">00</span><small>hs</small></div>
-    <div class="time-box"><span id="minutes" class="flip">00</span><small>min</small></div>
-    <div class="time-box"><span id="seconds" class="flip">00</span><small>seg</small></div>
+      <img src="fotos/abajo.gif" alt="Ubicación" class="icono-info">
+    </div>
+  </div> -->
+
+  <!-- <div class="separador">
+    <img src="fotos/separador.png" alt="separador">
+  </div> -->
+
+  <section class="countdown">
+    <h2 class="faltan"> Faltan </h2>
+    <div id="timer">
+      <div class="time-box"><span id="days" class="flip">00</span><small>días</small></div>
+      <div class="time-box"><span id="hours" class="flip">00</span><small>hs</small></div>
+      <div class="time-box"><span id="minutes" class="flip">00</span><small>min</small></div>
+      <div class="time-box"><span id="seconds" class="flip">00</span><small>seg</small></div>
+    </div>
+  </section>
+
+  <div class="comillas">
+    <img src="fotos/comillas.png" alt="comillas" class="icono-mapa">
   </div>
-</section>
+  <div class="frases">
+    <h2>"Te espero para compartir la alegría de esa noche que será para mi, mágica e inolvidable."</h2>
+  </div>
+  <div class="comillas">
+    <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+  </div>
+
+  <!-- carrusel boostrap -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="fotos/foto1.png" class="d-block w-100" alt="Foto 1">
+      </div>
+      <div class="carousel-item">
+        <img src="fotos/foto2.png" class="d-block w-100" alt="Foto 2">
+      </div>
+      <div class="carousel-item">
+        <img src="fotos/foto3.png" class="d-block w-100" alt="Foto 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <section class="evento">
+    <div class="comillas">
+      <img src="fotos/comillas.png" alt="comillas" class="icono-mapa">
+    </div>
     <div class="frases">
-        <h4>"Los 50 son solo el comienzo de las mejores historias."</h4> 
+      <h2>"Te espero para compartir la alegría de esa noche que será para mi, mágica e inolvidable."</h2>
     </div>
+    <section class="evento-comillas">
+      <div class="comillas">
+        <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+      </div>
 
-    <!-- Carrusel -->
-    <div class="carousel">
-        <img src="fotos/foto2.jpg" class="active" alt="Foto 2">
-        <img src="fotos/foto3.jpg" alt="Foto 3">
-        <img src="fotos/foto4.jpg" alt="Foto 4">
-    </div>
+      <!--Bloque de Fiesta -->
 
-    <section class="evento">
+      <div class="separador">
+        <img src="fotos/separador1.png" alt="separador">
+      </div>
+      <!-- <div class="separador">
+        <img src="fotos/separador1.png" alt="separador">
+      </div> -->
 
-  <!--Bloque de Dress -->  
-   <div class="evento-box">
-    <div class="icon agendar" id="iconAgendar">
-    <img src="fotos/icons8-fiesta.gif" alt="Ubicación" class="icono-mapa">
-  </div>    
-    <h3 class="titulo">Dress Code</h3>
-    <p class="subtitulo">Vestimenta</p>
-    <button onclick="abrirDialogo('agendaDress')">Ver</button>
-  </div>
-<div class="frases">
-        <h4>"No estamos envejeciendo, solo nos hacemos más "vintages"</h4> 
-    </div>
+      <div class="evento-box">
+        <h3 class="titulo">Fiesta</h3>
+        <p class="subtitulo">Sábado 13 de Diciembre</p>
+        <p class="subtitulo">21 horas</p>
+        <button onclick="abrirDialogo('agendaDialog')">Agendar</button>
+      </div>
 
-<!--Bloque de Fiesta -->  
-   <div class="evento-box">   
-    <div class="icon agendar" id="iconAgendar">
-    <img src="fotos/icons8-agenda.gif" alt="Ubicación" class="icono-mapa">
-  </div>
-    <h3 class="titulo">Fiesta</h3>
-    <p class="subtitulo">Domingo 23 de Noviembre - 21 hs.</p>
-    <button onclick="abrirDialogo('agendaDialog')">agendar</button>
-  </div>
+      <!-- <div class="separador">
+        <img src="fotos/separador2.png" alt="separador">
+      </div> -->
 
-  <div class="frases">
-        <h4>"Los 50 son 20 + 30 años de experiencia!!!"</h4> 
-    </div>
 
-  <!--Bloque de Lugar -->  
-   <div class="evento-box">
-    <div class="icon confirmar" id="iconConfirmar">
-    <img src="fotos/icons8-confirmar.gif" alt="Confirmar" class="icono-mapa">
-  </div>
-    <h3 class="titulo">Lugar</h3>
-    <p class="subtitulo">Cantina camping Club Atletico Empalme</p>
-    <button onclick="abrirDialogo('lugar')">Confirmar asistencia</button>
-  </div>
+      <div class="comillas">
+        <img src="fotos/flor1.png" alt="comillas" class="icono-mapa">
+      </div>
+      <!-- <div class="frases">
+        <h2>Que cada sueño se cumpla y nunca falte la buena vibra!!!</h2>
+      </div>
+      <div class="comillas">
+        <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+      </div> -->
 
-  <div class="frases">
-        <h4>"La vida comienza a los 50, lo anterior es solamente práctica"</h4> 
-    </div>  
+      <!--Bloque de Lugar -->      
+      <!-- <div class="separador">
+        <img src="fotos/separador1.png" alt="separador">
+      </div> -->
+      
+      <div class="evento-box">
+        <!-- <div class="icon confirmar" id="iconConfirmar">
+          <img src="fotos/icons8-confirmar.gif" alt="Confirmar" class="icono-mapa">
+        </div> -->
+        <h3 class="titulo">Lugar</h3>
+        <p class="subtitulo">La Fontana Eventos</p>
+        <button onclick="abrirDialogo('lugar')">Confirmar asistencia</button>
+      </div>
 
-<!-- Bloque de Dirección -->
-<div class="evento-box">
-  <div class="icon direccion" id="iconDireccion">
-    <img src="fotos/icons8-marcador.gif" alt="Ubicación" class="icono-mapa">
-  </div>
-  <h3 class="titulo">Dirección</h3>
-  <p class="subtitulo">Pje Sgto Cabral 480</p>
-  <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
-</div>
+      <!-- <div class="separador">
+        <img src="fotos/separador2.png" alt="separador">
+      </div> -->
 
-<div class="frases">
-        <h4>"Los primeros 50 años de la infancia son los más difíciles!"</h4> 
-    </div>
+      <div class="comillas">
+        <img src="fotos/flor2.png" alt="comillas" class="icono-mapa">
+      </div>
+      <!-- <div class="frases">
+        <h2>La vida es un camino lleno de luces!!!</h2>
+      </div>
+      <div class="comillas">
+        <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+      </div> -->
 
-<!--Bloque de tarjeta -->  
-   <div class="evento-box">
-    <div class="icon info" id="iconInfo">
-    <img src="fotos/icons8-información.gif" alt="Ubicación" class="icono-info">
-  </div>
-    <h3 class="titulo">Tarjetas</h3>
-    <p class="subtitulo">Toda la info</p>
-    <button onclick="abrirDialogo('tarjeta')">Ver</button>
-  </div>
+      <!-- Bloque de Dirección -->
+      <!-- <div class="separador">
+        <img src="fotos/separador1.png" alt="separador">
+      </div> -->
 
-<!-- Dialogo Mapa -->
-<dialog id="mapaDialog">
-  <h2>Ubicación</h2>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d493.79681169525855!2d-60.37334186270369!3d-33.256943294807456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1755796800333!5m2!1ses-419!2sar"
-    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
-  <button onclick="cerrarDialogo('mapaDialog')">Cerrar</button>
-</dialog>
+      <div class="evento-box">
+        <!-- <div class="icon direccion" id="iconDireccion">
+          <img src="fotos/icons8-marcador.gif" alt="Ubicación" class="icono-mapa">
+        </div> -->
+        <h3 class="titulo">Dirección</h3>
+        <p class="subtitulo">Ruta 177 y calle Tito Martin</p>
+        <p class="subtitulo">Villa Constitución</p>
+        <button onclick="abrirDialogo('mapaDialog')">Ver en Google Maps</button>
+      </div>
 
-<!-- Dialogo Agendar -->
-<!-- Diálogo de opciones -->
-<dialog id="agendaDialog">
-  <h2>Agendar Fiesta</h2>
-  <p class="textoDialogo">Elegí dónde querés agendar el evento:</p>
+      <!-- <div class="separador">
+        <img src="fotos/separador2.png" alt="separador">
+      </div> -->
 
-  <div class="agenda-opciones">
-    <!-- Google Calendar -->
-    <a 
-      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fiesta+50+a%C3%B1os+Diego+y+Mariano&dates=20251123T210000/20251124T030000&details=%C2%A1No+faltes+a+la+fiesta+de+los+50+de+Diego+y+Mariano!&location=Pje+Sgto+Cabral+480&sf=true&output=xml" 
-      target="_blank" 
-      class="agenda-btn"
-    >
-      <img src="fotos/google.png" alt="Google Calendar" width="24">
-      Google
-    </a>
-    <!-- Apple Calendar -->
-    <a href="Fiesta50.ics" download class="agenda-btn">
-      <img src="fotos/apple.png" alt="Apple Calendar" width="24">
-      Apple Calendar
-    </a>
-    <!-- Outlook -->
-    <a 
-      href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Fiesta+50+a%C3%B1os+Diego+y+Mariano&body=%C2%A1No+faltes+a+la+fiesta!&startdt=2025-11-23T21:00:00&enddt=2025-11-24T03:00:00&location=Pje+Sgto+Cabral+480" 
-      target="_blank" 
-      class="agenda-btn"
-    >
-      <img src="fotos/outlook.webp" alt="Outlook" width="24">
-      Outlook
-    </a>
-    <!-- Calendarios genéricos (ICS) -->
-    <a href="Fiesta50.ics" download class="agenda-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Calendar_font_awesome.svg" alt="ICS" width="24">
-      Otros
-    </a>
-  </div>
-  <br>
-  <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
-</dialog>
+      <div class="comillas">
+        <img src="fotos/flor1.png" alt="comillas" class="icono-mapa">
+      </div>
+      <!-- <div class="frases">
+        <h2>Hoy es un día soñado y quiero compartirlo con todos ustedes!!!</h2>
+      </div>
+      <div class="comillas">
+        <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+      </div> -->
 
-<!-- Dialogo dress code -->
-<dialog id="agendaDress">
-  <h2>Como vestir?</h2>
-  <p class="textoDialogo">Si fuiste al colegio con ellos,</p>
-  <p class="textoDialogo">vestite como alguien de tu edad.</p>
-  <p class="textoDialogo">No te quieras hacer el pendejo.</p>
-  <button onclick="cerrarDialogo('agendaDress')">Cerrar</button>
-</dialog>
+      <!--Bloque de tarjeta -->
 
-<!-- Dialogo Confirmar Asistencia -->
-<dialog id="lugar">
-  <h2>Confirmale tu presencia a</h2>  
-  <a class="whats" href="https://wa.me/543364406580"
-            ><img
-              src="fotos/whatsapp.png"
-              alt="WhatsApp"
-              height="18px"
-              width="18px"
-            /> a Diego</a>
-        
-  <p class="textoDialogo"><a class="whats" href="https://wa.me/543364544769"
-            ><img
-              src="fotos/whatsapp.png"
-              alt="WhatsApp"
-              height="18px"
-              width="18px"
-            /> a Mariano</a></p>
-  <button onclick="cerrarDialogo('lugar')">Cerrar</button>
-</dialog>
+      <!-- <div class="separador">
+          <img src="fotos/separador1.png" alt="separador">
+        </div> -->
 
-<!-- Dialogo Confirmar asistencia -->
-<!-- <dialog id="asistenciaDialog">
+      <div class="evento-box">
+        <!-- <div class="icon info" id="iconInfo">
+          <img src="fotos/icons8-información.gif" alt="Ubicación" class="icono-info">
+        </div> -->
+        <h3 class="titulo">Tarjetas</h3>
+        <p class="subtitulo">Toda la info</p>
+        <button onclick="abrirDialogo('tarjeta')">Ver</button>
+      </div>
+
+      <!-- <div class="separador">
+        <img src="fotos/separador2.png" alt="separador">
+      </div> -->
+
+
+      <div class="comillas">
+        <img src="fotos/flor2.png" alt="comillas" class="icono-mapa">
+      </div>
+      <!-- <div class="frases">
+        <h2>Vivamos llenos de esperanzas y sueños!!!</h2>
+      </div>
+      <div class="comillas">
+        <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+      </div> -->
+
+      <!--Bloque de Dress -->
+
+      <!-- <div class="separador">
+          <img src="fotos/separador1.png" alt="separador">
+        </div> -->
+
+      <div class="evento-box">        
+        <!-- <div class="icon agendar" id="iconAgendar">
+          <img src="fotos/moño.gif" alt="Ubicación" class="icono-mapa">
+        </div> -->
+        <h3 class="titulo">Dress Code</h3>
+        <p class="subtitulo">Vestimenta</p>
+        <button onclick="abrirDialogo('agendaDress')">Ver</button>
+      </div>
+
+      <div class="separador">
+        <img src="fotos/separador2.png" alt="separador">
+      </div>
+
+
+      <!-- Frases -->
+      <!-- <div class="comillas">
+        <img src="fotos/comillas.png" alt="comillas" class="icono-mapa">
+      </div>
+      <div class="frases">
+        <h2>"Hoy empiezo a recorrer nuevos caminos, hagamos esta noche inolvidable!!!</h2>
+      </div>
+      <div class="comillas">
+        <img src="fotos/comillas-abajo.png" alt="comillas" class="icono-mapa">
+      </div> -->
+
+      <!-- Dialogo Mapa -->
+      <dialog id="mapaDialog">
+        <h2>Ubicación</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.0003113393834!2d-60.33833758049984!3d-33.24433383197492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b76c3ab1f60d75%3A0x8ead34f3dc16f6a4!2sEventos%20La%20Fontana%20Villa%20Constitucion!5e1!3m2!1ses-419!2sar!4v1758071656192!5m2!1ses-419!2sar"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+        <button onclick="cerrarDialogo('mapaDialog')">Cerrar</button>
+      </dialog>
+
+      <!-- Dialogo Agendar -->
+      <dialog id="agendaDialog">
+        <h2>Agendar Fiesta</h2>
+        <p class="textoDialogo">Elegí dónde querés agendar el evento:</p>
+
+        <div class="agenda-opciones">
+          <!-- Google Calendar -->
+          <a id="googleBtn" target="_blank" class="agenda-btn">
+            <img src="fotos/google.png" alt="Google" width="24">
+            Google Calendar
+          </a>
+
+          <!-- Apple Calendar -->
+          <a id="icsBtn" download="fiesta.ics" class="agenda-btn">
+            <img src="fotos/apple.png" alt="Apple" width="24">
+            Apple Calendar
+          </a>
+
+          <!-- Outlook -->
+          <a id="outlookBtn" target="_blank" class="agenda-btn">
+            <img src="fotos/outlook.webp" alt="Outlook" width="24">
+            Outlook
+          </a>
+
+          <!-- Calendarios genéricos (ICS) -->
+
+          <a id="icsOtros" download="fiesta.ics" class="agenda-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Calendar_font_awesome.svg" alt="ICS"
+              width="24">
+            Otros
+          </a>
+        </div>
+        <br>
+        <button onclick="cerrarDialogo('agendaDialog')">Cerrar</button>
+      </dialog>
+
+      <!-- Dialogo dress code -->
+      <dialog id="agendaDress">
+        <h2>Como vestir?</h2>
+        <p class="textoDialogo">El Dress Code lo ponés vos.</p>
+        <p class="textoDialogo">Elegí lo que te guste y con lo</p>
+        <p class="textoDialogo">que te sientas cómod@.</p>
+        <button onclick="cerrarDialogo('agendaDress')">Cerrar</button>
+      </dialog>
+
+      <!-- Dialogo Confirmar Asistencia -->
+      <dialog id="lugar">
+        <h2>Confirmale tu presencia a</h2>
+        <!-- <a class="whats" href="https://wa.me/543364406580"><img src="fotos/whatsapp.png" alt="WhatsApp" height="18px"
+            width="18px" /> a Diego</a>
+
+        <p class="textoDialogo"><a class="whats" href="https://wa.me/543364544769"><img src="fotos/whatsapp.png"
+              alt="WhatsApp" height="18px" width="18px" /> a Mariano</a></p> -->
+        <button onclick="cerrarDialogo('lugar')">Cerrar</button>
+      </dialog>
+
+      <!-- Dialogo Confirmar asistencia -->
+      <!-- <dialog id="asistenciaDialog">
   <h2>Confirmar asistencia ✅</h2>
   <form method="POST" action="https://formspree.io/f/xgvzbvqy">     
     <label for="nombre">Tu Nombre:</label>
@@ -202,41 +345,49 @@
   <button onclick="cerrarDialogo('asistenciaDialog')">Cerrar</button>
 </dialog> -->
 
-<!-- Dialogo tarjeta -->
-<dialog id="tarjeta">
-  <h2>Costo de las tarjetas</h2>
-  <p class="textoDialogo">Mayores $</p>
-  <p class="textoDialogo">Menores 12 años $</p>
-  <h2>Podes transferir a los siguientes alias</h2>
-  <p class="textoDialogo">Dciarrocc1179.nx.ars Titular Diego Andres Ciarrochi</p>  
-  <p class="textoDialogo">BLOC.DETUVO.MESADA Titular Mariano Cesar Ocampo</p>
-  <h2>Avisa del pago de las tarjetas a:</h2>
-  <a class="whats" href="https://wa.me/543364406580"
-            ><img
-              src="fotos/whatsapp.png"
-              alt="WhatsApp"
-              height="18px"
-              width="18px"
-            /> a Diego</a>
-        
-  <p><a class="whats" href="https://wa.me/543364544769"
-            ><img
-              src="fotos/whatsapp.png"
-              alt="WhatsApp"
-              height="18px"
-              width="18px"
-            /> a Mariano</a></p>
-  <button onclick="cerrarDialogo('tarjeta')">Cerrar</button>
-</dialog>
+      <!-- Dialogo tarjeta -->
+      <dialog id="tarjeta">
+        <h2>Costo de las tarjetas</h2>
+        <p class="textoDialogo">Mayores $ -</p>
+        <p class="textoDialogo">Menores 10 años $ -</p>
+        <!-- <h2>Podes transferir a los siguientes alias</h2>
+        <p class="textoDialogo">Dciarrocc1179.nx.ars</p>
+        <p class="textoDialogo">Titular Diego Andres Ciarrochi</p>
+        <p>----</p>
+        <p class="textoDialogo">BLOC.DETUVO.MESADA</p>
+        <p class="textoDialogo">Titular Mariano Cesar Ocampo</p> -->
+        <h2>Avisa del pago de las tarjetas a:</h2>
+        <!-- <a class="whats" href="https://wa.me/543364406580"><img src="fotos/whatsapp.png" alt="WhatsApp" height="18px"
+            width="18px" /> a Diego</a>
+
+        <p><a class="whats" href="https://wa.me/543364544769"><img src="fotos/whatsapp.png" alt="WhatsApp" height="18px"
+              width="18px" /> a Mariano</a></p> -->
+        <button onclick="cerrarDialogo('tarjeta')">Cerrar</button>
+      </dialog>
+
+      <!-- Formulario -->
+       <form id="miFormulario" action="https://formspree.io/f/xgvzbvqy" method="POST">
+  <h3>Consultas y canciones para la fiesta</h3>
+  
+  <label for="nombre">Tu nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="consulta">Consulta:</label>
+  <textarea id="consulta" name="consulta" rows="3"></textarea>
+
+  <label for="cancion">Canción que te gustaría escuchar:</label>
+  <input type="text" id="cancion" name="cancion">
+
+  <button type="submit">Enviar</button>
+</form>
+
+<p id="mensaje" style="color:#ef8fa6; display:none; margin-top:10px;">
+  ¡Gracias! Tu mensaje fue enviado.
+</p>
 
 
-    <!-- Frases -->
-    <div class="frases">        
-        <h4>"La vida empieza cada día, y hoy empieza con una fiesta."</h4>
-    </div>
 
-    <!-- Formulario -->
-     <form action="https://formspree.io/f/xgvzbvqy" method="POST">   
+      <!-- <form action="https://formspree.io/f/xgvzbvqy" method="POST">
         <h3>Consultas y canciones para la fiesta</h3>
         <label for="nombre">Tu nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -248,13 +399,15 @@
         <input type="text" id="cancion" name="cancion">
 
         <button type="submit">Enviar</button>
-    </form>
+      </form> -->
 
-    <script src="script.js"></script>
-
-
-    <footer class="pie3">
+      <script src="script.js"></script>
+      <footer class="pie3">
         <h5>Sitio web creado por Jose Luis Gerbino</h5>
       </footer>
+      <!-- JS de Bootstrap 5 -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

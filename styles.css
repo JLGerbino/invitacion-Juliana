@@ -1,62 +1,75 @@
-/* =====================
-   Estilo Global
-===================== */
+/*Estilo Global*/
 body {
-  font-family: "Ubuntu Mono", monospace;/*'Open Sans', sans-serif;*/
-  background-color: #fcf9f9;   /* Fondo blanco */
-  color: #0c0c0c;           /* negro */
+  font-family: "Ubuntu Mono", monospace;/*'Open Sans', sans-serif;*/  
+  background-color:white;/* rgb(141, 102, 98); */ 
+  color: #ef8fa6;
   margin: 0;
   padding: 0;
   text-align: center;
+  /* border: rgb(141, 102, 98) */;
 }
 h2, h3, p{
-  font-family: "Caveat", cursive;/*'Great Vibes', cursive;*/
-  color: white;
+  font-family: "Caveat", cursive;
+  color: #cb8596 /* white */ /* #ef8fa6 */;
 }
-
+.abajo{
+  background-color:rgb(141, 102, 98);
+}
 .textoDialogo{
   font-family: "Ubuntu Mono", monospace;
-  color: white;
+  color:#ef8fa6  ;
 }
 
-h1, h4, h5, h6 {
-  /*font-family: 'Great Vibes', cursive;*/
-  color: black;
+h1, h4, h5, h6 {  
+  color: #ef8fa6; 
   margin: 10px 0;
 }
 .whats{
   font-family: "Ubuntu Mono", monospace;
   text-decoration: none;
-  color: white;  
+  color:rgb(254, 245, 238) ;  
 }
 
 .btn-agendar{
   text-decoration: none;
-  color: white;
+  color:#ef8fa6;
 }
 
-.titulo{
-  font-size: 30px;
+.titulo{  
+  font-size: 50px;
 }
 
 .subtitulo{
-  font-size: 20px;
+  color:rgb(254, 245, 238) ;
+  font-size: 30px;
 }
 
 .frases{
   font-family: "Caveat", cursive;
-  color: black;
-  font-size: 25px;
+  color: #ef8fa6;/* white; */
+  font-size: 35px; /*  25px */
+  padding-left: 2%;
+  padding-right: 2%;
 }
-/* p{
-  color: white;
-  font-family:"Ubuntu Mono", monospace;
-} */
+
+.mensaje-fiesta {
+  font-family: "Caveat", cursive;
+  font-size: 3.5em;
+  color:#ef8fa6;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  animation: bounce 1.2s infinite;
+  margin-top: 20px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
 button {
   font-family: "Ubuntu Mono", monospace;
-  background: white;
-  color: #000;
+  background: #cb8596  /* rgb(239, 205, 190) */ ;
+  color:#474646;
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
@@ -66,60 +79,37 @@ button {
 }
 
 button:hover {
-  background: white;
+  background: #cb8596 /* rgb(239, 205, 190) */; 
   transform: scale(1.05);
 }
 
-/* =====================
-   Encabezado con imagen
-===================== */
-
+/*Encabezado con imagen*/
 header img {
   width: 100%;
   max-height: 1200px;
   object-fit: contain;
-  background-color: black; 
+  background-color: white; 
   display: block;
-  border-bottom: 3px solid black;
+ /*  border-bottom: 3px solid white; */
 }
 
-
-/* header img {
-  width: 100%;
-  max-height: 1200px;
-  object-fit: cover;
-  display: block;
-  border-bottom: 3px solid #d4af37;
-} */
-
-/* =====================
-   Carrusel
-===================== */
-.carousel {
-  position: relative;
-  max-width: 100%;
-  height: 400px;
-  overflow: hidden;
+.comillas{
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.separador{
+  margin-top: 5px;
+  margin-bottom: 1px;
 }
 
-.carousel img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 1s ease-in-out;
+/*Carrusel*/
+.carousel-item img {
+  height: 300px;        
+  object-fit: cover;    /* recorta la imagen sin deformarla */
+  width: 100%;          
 }
 
-.carousel img.active {
-  opacity: 1;
-}
-
-/* =====================
-   Cuenta regresiva
-===================== */
+/*Cuenta regresiva*/
 #timer {
   display: flex;
   justify-content: center;
@@ -130,12 +120,13 @@ header img {
 
 .faltan{
   font-size: 50px;
-  color: black;
+  color:#cb8596;
 }
 
 .time-box {
+  font-size: 30px;
   text-align: center;
-  background: #111; /* Negro más claro */
+  background: #cb8596; 
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 2px 8px grey(212,175,55,0.5);
@@ -144,22 +135,23 @@ header img {
 }
 
 .time-box span {
+  font-family: "Caveat", cursive;
   display: block;
-  font-size: 2em;
-  color: white;
+  font-size: 3.5em;/*2em*/
+  color:rgb(254, 245, 238);
   transition: transform 0.5s;
 }
 
 .time-box small {
-  font-size: 0.8em;
-  color: #bbb;
+  font-size: 1.5em;/*0.8em*/
+  color: #474646/*#bbb*/;
 }
 
 /* Flip animación */
 .flip {
   display: inline-block;
   animation: none;
-  font-family: "Ubuntu Mono", monospace; /*"Caveat", cursive;*/
+  font-family: "Ubuntu Mono", monospace; 
 }
 
 .flip.animate {
@@ -172,16 +164,14 @@ header img {
   100% { transform: rotateX(0deg); }
 }
 
-/* =====================
-   Bloques de Evento
-===================== */
+/*Bloques de Evento*/
 .evento-box {
-  background: #111;
+  background: white/* #cb8596 */;
   border-radius: 12px;
   padding: 20px;
   margin: 20px auto;
   max-width: 400px;
-  box-shadow: 0 4px 12px rgba(252, 252, 252, 0.4);
+  /* box-shadow: 0 4px 12px white; */
   animation: fadeIn 1s ease;
 }
 
@@ -190,18 +180,16 @@ header img {
 }
 
 .evento-box p {
-  color: #ccc;
+  color: #cb8596  /* rgb(254, 245, 238) */;    
 }
 
-/* =====================
-   Diálogos
-===================== */
+/*Diálogos*/
 dialog {
   border: none;
   border-radius: 12px;
   padding: 20px;
   max-width: 500px;
-  background: #111;
+  background: white  /* rgb(141, 102, 98) */ ;/*#111;*/
   color: #d4af37;
   box-shadow: 0 8px 20px rgba(248, 248, 248, 0.5);
 }
@@ -210,9 +198,7 @@ dialog::backdrop {
   background: rgba(0,0,0,0.8);
 }
 
-/* =====================
-   Animaciones Globales
-===================== */
+/*Animaciones Globales*/
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -229,37 +215,35 @@ dialog::backdrop {
 }
 
 /*boton musica*/
-#musicToggle {   
+.music-btn {
   position: fixed;
-  bottom: 20px;    /* 🔥 lo mandamos abajo */
-  right: 20px;     /* 🔥 esquina derecha */
-  background: black;  
+  bottom: 20px;
+  right: 20px;
+  background: #cb8596  /* rgb(254, 245, 238) */;
   border: none;
-  padding: 10px 12px;
-  border-radius: 50%;
-  font-size: 1.2em;
   cursor: pointer;
+  padding: 10px 12px;
+  /* padding: 8px; */
+  border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.2s, background 0.2s;
-  z-index: 1000;   /* siempre arriba */
+  /* transition: transform 0.2s ease; */
+  z-index: 1000;
 }
 
-#musicToggle:hover {
-  background: black;
-  color: white;
+.music-btn:hover {
+  background:(254, 245, 238);
   transform: scale(1.1);
 }
 
-/* =====================
-   Formulario de consultas
-===================== */
+/*Formulario de consultas*/
 form {
   max-width: 500px;
   margin: 40px auto;
-  background: #111; /* igual que los boxes del evento */
+  background: white /* #cb8596  *//*  rgb(141, 102, 98) */;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+  /* box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4); */
   text-align: left;
   animation: fadeInUp 1s ease;
 }
@@ -267,32 +251,32 @@ form {
 form h3 {
   text-align: center;
   margin-bottom: 20px;
-  color: #fffffe; /* dorado */
+  color: #cb8596  /* rgb(254, 245, 238) */;
 }
 
 form label {
   display: block;
   margin: 12px 0 6px;
   font-weight: bold;
-  color: #fdfdfc;
+  color:  #cb8596/*  rgb(254, 245, 238) */;
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #f8f8f7;
+  border: 1px solid #cb8596 /* rgb(254, 245, 238) */;
   border-radius: 8px;
   font-size: 1em;
   box-sizing: border-box;
-  background: #000; /* mantiene el negro */
-  color: #f7f6f6;
+  background: white; 
+  color: #ef8fa6  /* rgb(254, 245, 238) */;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: white;
+  border-color: #cb8596/*  white */;
   outline: none;
   box-shadow: 0 0 6px rgba(252, 251, 249, 0.6);
 }
@@ -324,7 +308,7 @@ form button {
 }
 
 .agenda-btn:hover {
-  background: #f7f7f7;
+  background: #cb8596 /* #f7f7f7 */;
   transform: scale(1.02);
 }
 
@@ -332,14 +316,12 @@ form button {
 
 
 
-/* =====================
-   Ajustes Responsive
-===================== */
+/*Ajustes Responsive*/
 @media (max-width: 768px) {
   /* Cuenta regresiva más compacta */
   #timer {
     gap: 10px;
-    flex-wrap: wrap;   /* 🔥 si no entra, pasa a dos filas */
+    flex-wrap: wrap;   
   }
 
   .time-box {
@@ -395,3 +377,11 @@ form button {
   max-height: 1200px;  
 }
 }
+/* Ajuste carrusel en escritorio */
+@media (min-width: 1024px) {
+  .carousel-item img {
+    height: 700px;  
+    object-fit: cover;
+  }
+}
+

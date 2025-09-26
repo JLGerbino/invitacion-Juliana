@@ -1,32 +1,23 @@
-
-// Carrusel
-let index = 0;
-const images = document.querySelectorAll('.carousel img');
-
-setInterval(() => {
-    images[index].classList.remove('active');
-    index = (index + 1) % images.length;
-    images[index].classList.add('active');
-}, 3000);
-
 // Control de música
-const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicToggle");
-let playing = false;
+const musicToggle = document.getElementById("musicToggle");
+const iconPlay = document.getElementById("iconPlay");
+const iconPause = document.getElementById("iconPause");
+const bgMusic = document.getElementById("bgMusic");
 
-musicBtn.addEventListener("click", () => {
-    if (playing) {
-        music.pause();
-        musicBtn.textContent = "🎵";
-        musicBtn.classList.remove("playing"); // quita animación
-    } else {
-        music.play();
-        musicBtn.textContent = "⏸";
-        musicBtn.classList.add("playing"); // agrega animación
-    }
-    playing = !playing;
+let isPlaying = false;
+
+musicToggle.addEventListener("click", () => {
+  if (!isPlaying) {
+    bgMusic.play();
+    iconPlay.style.display = "none";
+    iconPause.style.display = "inline";
+  } else {
+    bgMusic.pause();
+    iconPlay.style.display = "inline";
+    iconPause.style.display = "none";
+  }
+  isPlaying = !isPlaying;
 });
-
 
 // Función para actualizar con efecto flip
 function updateFlip(id, newValue) {
@@ -42,7 +33,7 @@ function updateFlip(id, newValue) {
 }
 
 // Cuenta regresiva
-const targetDate = new Date("2025-11-23T21:00:00").getTime();
+const targetDate = new Date("2025-12-13T21:00:00").getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
@@ -50,7 +41,7 @@ const countdown = setInterval(() => {
 
     if (distance < 0) {
         clearInterval(countdown);
-        document.getElementById("timer").innerHTML = "🎉 ¡A disfrutar la fiesta! 🎂";
+        document.getElementById("timer").innerHTML = '<h1 class="mensaje-fiesta">A disfrutar la fiesta!</h1>';
         return;
     }
 
@@ -73,31 +64,88 @@ function cerrarDialogo(id) {
   document.getElementById(id).close();
 }
 
-/*animacion fiesta*/
-lottie.loadAnimation({
-  container: document.getElementById('iconFiesta'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'https://lottie.host/250fc3f4-bc3e-4a6d-8328-26ef9a8d34b8/b2yyeGQj7o.json'
+//Datos del evento (modificar acá)
+const evento = {
+  titulo: "Fiesta 15 años de Carla",
+  descripcion: "¡No faltes a la fiesta de 15 de Carla!",
+  ubicacion: "La Fontana Eventos - Ruta 177 y calle Tito Martin - Villa Cosntitución",
+  inicio: "2025-12-13T21:00:00", 
+  fin: "2025-12-14T05:00:00"
+};
+
+// Generador de URLs dinámicas
+function generarLinks(evento) {
+  // Google Calendar → fechas en formato YYYYMMDDTHHmmss
+  const inicioGoogle = evento.inicio.replace(/[-:]/g, "").split(".")[0];
+  const finGoogle = evento.fin.replace(/[-:]/g, "").split(".")[0];
+
+  const googleURL = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+    `&text=${encodeURIComponent(evento.titulo)}` +
+    `&details=${encodeURIComponent(evento.descripcion)}` +
+    `&location=${encodeURIComponent(evento.ubicacion)}` +
+    `&dates=${inicioGoogle}/${finGoogle}`;
+
+  // Outlook
+  const outlookURL = `https://outlook.live.com/calendar/0/deeplink/compose?` +
+    `subject=${encodeURIComponent(evento.titulo)}` +
+    `&body=${encodeURIComponent(evento.descripcion)}` +
+    `&startdt=${evento.inicio}` +
+    `&enddt=${evento.fin}` +
+    `&location=${encodeURIComponent(evento.ubicacion)}`;
+
+  // Archivo .ics
+  const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TuInvitacion//Fiesta//ES
+BEGIN:VEVENT
+UID:fiesta@example.com 
+DTSTAMP:${inicioGoogle}
+DTSTART:${inicioGoogle}
+DTEND:${finGoogle}
+SUMMARY:${evento.titulo}
+LOCATION:${evento.ubicacion}
+DESCRIPTION:${evento.descripcion}
+END:VEVENT
+END:VCALENDAR`;
+
+  const icsBlob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+  const icsURL = URL.createObjectURL(icsBlob);
+
+  return { googleURL, outlookURL, icsURL };
+}
+
+// Insertar en los botones
+window.addEventListener("DOMContentLoaded", () => {
+  const { googleURL, outlookURL, icsURL } = generarLinks(evento);
+
+  document.getElementById("googleBtn").href = googleURL;
+  document.getElementById("outlookBtn").href = outlookURL;
+  document.getElementById("icsBtn").href = icsURL;
+  document.getElementById("icsOtros").href = icsURL;
 });
 
-/*animacion lugar*/
-lottie.loadAnimation({
-  container: document.getElementById('iconLugar'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'https://lottie.host/7cccf2fc-84a6-4a8b-a6cb-9d321b2d5e0d/m7lbhhQe1D.json'
+//Manejo del formulario
+const form = document.getElementById("miFormulario");
+const mensaje = document.getElementById("mensaje");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const datos = new FormData(form);
+
+  const respuesta = await fetch(form.action, {
+    method: form.method,
+    body: datos,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (respuesta.ok) {
+    form.reset(); 
+    mensaje.style.display = "block"; 
+    setTimeout(() => {
+      mensaje.style.display = "none";
+    }, 3000);
+  } else {
+    alert("Hubo un error al enviar. Intenta de nuevo.");
+  }
 });
-
-/*animacion ubicacion*/
-lottie.loadAnimation({
-  container: document.getElementById('iconDireccion'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,  
-  /*path: 'https://lottie.host/89324d9e-3eaf-4a38-b244-19cda3c6a391/2zjsRjvUwl.json'*/
-});
-
-
