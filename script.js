@@ -33,7 +33,7 @@ function updateFlip(id, newValue) {
 }
 
 // Cuenta regresiva
-const targetDate = new Date("2026-01-24T21:15:00").getTime();
+const targetDate = new Date("2025-12-20T21:00:00").getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
@@ -69,8 +69,8 @@ const evento = {
   titulo: "Fiesta 15 años de Juliana",
   descripcion: "¡No faltes a la fiesta de Juliana!",
   ubicacion: "La Fontana Eventos - Ruta 177 y calle Tito Martin - Villa Cosntitución",
-  inicio: "2026-01-24T21:15:00", 
-  fin: "2025-01-25T05:00:00"
+  inicio: "2025-12-20T21:00:00", 
+  fin: "2025-12-21T05:00:00"
 };
 
 // Generador de URLs dinámicas
