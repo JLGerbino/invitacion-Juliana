@@ -74,13 +74,13 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-button {
-  font-family:  "Ubuntu Mono", monospace;
+button {  
+  font-family: "PT Sans", sans-serif;
   background: #cb8596  /* rgb(239, 205, 190) */ ;
   color:#474646;
   border: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -119,6 +119,7 @@ header img {
 
 /*Cuenta regresiva*/
 #timer {
+  font-family: "PT Sans", sans-serif;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -132,7 +133,7 @@ header img {
   color:#cb8596;
 }
 
-.time-box {
+.time-box {  
   font-size: 30px;
   text-align: center;
   background: #cb8596; 
@@ -144,7 +145,7 @@ header img {
 }
 
 .time-box span {
-  font-family: "Caveat", cursive;
+  font-family: "PT Sans", sans-serif;
   display: block;
   font-size: 3.5em;/*2em*/
   color:rgb(254, 245, 238);
