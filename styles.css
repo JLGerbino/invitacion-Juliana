@@ -255,14 +255,19 @@ dialog::backdrop {
 }
 
 .regalo{
-  margin-top: 50px;
+  margin-top: 10px;
   background-color: white;
 }
 .regalo:hover{
   background-color: white;
   transform: scale(1.1);
 }
-
+.divRegalos{
+  margin-top: 80px;  
+  font-family: "Lavishly Yours", cursive;
+  font-size: 60px;
+  color:#cb8596;  
+}
 /*Formulario de consultas*/
 form {
   max-width: 500px;
