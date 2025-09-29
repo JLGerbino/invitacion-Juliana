@@ -64,7 +64,7 @@
     <h2 class="frases">"Algunas de las personas que me acompañaron en el camino"</h2>
   </div>
   <div class="comillas">
-    <img src="fotos/camara.png" alt="comillas" class="icono-mapa">
+    <img src="fotos/camara.gif" alt="camara" class="camara">
   </div>
 
   <!-- carrusel boostrap -->
@@ -318,6 +318,19 @@
         <p class="textoDialogo">Elegí lo que te guste y con lo</p>
         <p class="textoDialogo">que te sientas cómod@.</p>
         <button onclick="cerrarDialogo('agendaDress')">Cerrar</button>
+      </dialog>
+
+      <div class="regalo">
+        <button class="regalo" onclick="abrirDialogo('regalo')"><img src="fotos/regalo.gif" alt="comillas" class="icono-mapa"></button>    
+  </div>
+  <!-- Dialogo regalo -->
+      <dialog id="regalo">
+        <h2 class="dialogo">Si queres regalarme algo más</h2>
+        <h2 class="dialogo">que tu presencia...</h2>
+        <p class="textoDialogo">Alias</p>
+        <p class="textoDialogo">carpa.trueno.lisa</p>
+        <p class="textoDialogo">A nombre de Juliana Cardozo</p>                
+        <button onclick="cerrarDialogo('regalo')">Cerrar</button>
       </dialog>
 
       <!-- Formulario -->

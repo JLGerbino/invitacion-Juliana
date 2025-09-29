@@ -177,6 +177,11 @@ header img {
   100% { transform: rotateX(0deg); }
 }
 
+.camara{
+  height: 100px;
+  width: 100px;
+}
+
 /*Bloques de Evento*/
 .evento-box {
   background: white/* #cb8596 */;
@@ -246,6 +251,15 @@ dialog::backdrop {
 
 .music-btn:hover {
   background:(254, 245, 238);
+  transform: scale(1.1);
+}
+
+.regalo{
+  margin-top: 50px;
+  background-color: white;
+}
+.regalo:hover{
+  background-color: white;
   transform: scale(1.1);
 }
 
