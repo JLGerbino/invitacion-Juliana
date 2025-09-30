@@ -344,15 +344,17 @@
       <!-- Formulario -->
        <form id="miFormulario" action="https://formspree.io/f/xgvzbvqy" method="POST">
   <h3>Consultas y canciones para la fiesta</h3>
+
+  <input type="hidden" name="invitacion" value="Cumple de Juliana">
   
   <label for="nombre">Tu nombre:</label>
   <input type="text" id="nombre" name="nombre" required>
 
   <label for="consulta">Consulta:</label>
-  <textarea id="consulta" name="consulta" rows="3"></textarea>
+  <textarea id="consulta" name="consulta" rows="3" required></textarea>
 
   <label for="cancion">Canción que te gustaría escuchar:</label>
-  <input type="text" id="cancion" name="cancion">
+  <input type="text" id="cancion" name="cancion" required>
 
   <button type="submit">Enviar</button>
 </form>
